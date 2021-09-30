@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockMarket Profit and Loss</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <section class="left-container">
+            <div class="stock-container">
+                <div class="heading">PROFIT OR LOSS ?</div>
+                <form class="form">
+                   <div class="input-container">
+                     <!-- class="stock-price"><div -->
+                        <input type="number"  class="stock-price" id="market-price" placeholder="Stock Market Price" required>
+                    </div>
+                   <!-- </div> -->
+                   <div class="input-container">
+                        <input type="number" class="stock-price" id="quantity-stocks" placeholder="Quantity Of Stocks" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" class="stock-price" id="selling-price" placeholder="Stock Selling Price" required>
+                    </div> 
+                    <div class="button-container">
+                        <button class="stock-button">Calculate</button>
+                      </div>
+                </form> 
+                <div class="result" style="display: none;"></div>
+            </div>
+        </section>
+        <section class="right-container">
+            <image src="image2.svg"></image>
+        </section>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
