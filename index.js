@@ -21,23 +21,23 @@ form.addEventListener("submit",(event) =>{
 });
 
 function profitLoss(market_price, quantity , selling_price){
-    selling_price.value = selling_price.value*quantity.value;
-    market_price.value = market_price.value*quantity.value;
+    var sp = selling_price.value*quantity.value;
+    var cp = market_price.value*quantity.value;
     
-    if(parseInt(market_price.value) < parseInt(selling_price.value ))
+    if(parseInt(cp) < parseInt(sp))
     {
-        var profit = (selling_price.value - market_price.value);
-        var profitPercent = (profit/market_price.value)*100 ;
+        var profit = (sp - cp);
+        var profitPercent = (profit/cp)*100 ;
        
          output.innerText = "Hey the profit is "+ profit +" and profit% is "+ profitPercent.toFixed(2)+"%";
         ctn.style.backgroundColor="#013a4c";
 
     }
-    else if(parseInt(market_price.value) > parseInt(selling_price.value))
+    else if(parseInt(cp) > parseInt(sp))
    
     {
-        var loss = ( market_price.value - selling_price.value );
-        var lossPercent = (loss/market_price.value)*100; 
+        var loss = ( cp - sp );
+        var lossPercent = (loss/cp)*100; 
         
         output.innerText ="Hey the loss is "+ loss +" and loss% is "+ lossPercent.toFixed(2)+"%";
         ctn.style.backgroundColor="black";
